@@ -16,6 +16,10 @@ body {
   margin: 0;
 }
 
+h1 {
+  margin-top: 40px;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -81,5 +85,34 @@ body {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* add animations for js trigger */
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
   }
 }
