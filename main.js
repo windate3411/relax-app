@@ -10,11 +10,12 @@ function breatheAnimation() {
   text.innerText = 'Breathe in!'
   container.className = 'container grow'
   setTimeout(() => {
-    text.innerText = 'hold'
+    text.innerText = 'Hold it!'
     setTimeout(() => {
       text.innerText = 'Breathe out!'
       container.className = 'container shrink'
     }, holdTime)
   }, breatheTime)
 }
+breatheAnimation()
 setInterval(breatheAnimation, totalTime)
